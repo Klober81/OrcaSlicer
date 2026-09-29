@@ -202,7 +202,8 @@ DynamicPrintConfig PresetBundle::construct_full_config(
     if (num_filaments <= 1) {
         // BBS: update filament config related with variants
         DynamicPrintConfig filament_config = in_filament_presets[0].config;
-        if (apply_extruder && ((extruder_count > 1) || different_extruder))
+        // Orca: a multi-variant filament resolves its variants on a single-variant printer too.
+        if (apply_extruder && ((extruder_count > 1) || different_extruder || filament_config.has_multi_variant_filament()))
             filament_config.update_values_to_printer_extruders(out, extruder_count, extruder_volume_type_count, nozzle_volume_types, filament_options_with_variant, "", "filament_extruder_variant", 1, filament_maps[0], (NozzleVolumeType)filament_volume_maps[0]);
         out.apply(filament_config);
         compatible_printers_condition.emplace_back(in_filament_presets[0].compatible_printers_condition());
@@ -226,7 +227,8 @@ DynamicPrintConfig PresetBundle::construct_full_config(
         filament_temp_configs.resize(num_filaments);
         for (size_t i = 0; i < num_filaments; ++i) {
             filament_temp_configs[i] = *(filament_configs[i]);
-            if (apply_extruder && ((extruder_count > 1) || different_extruder))
+            // Orca: a multi-variant filament resolves its variants on a single-variant printer too.
+            if (apply_extruder && ((extruder_count > 1) || different_extruder || filament_temp_configs[i].has_multi_variant_filament()))
                 filament_temp_configs[i].update_values_to_printer_extruders(out, extruder_count, extruder_volume_type_count, nozzle_volume_types, filament_options_with_variant, "", "filament_extruder_variant", 1, filament_maps[i], (NozzleVolumeType)filament_volume_maps[i]);
         }
 
@@ -4927,7 +4929,8 @@ DynamicPrintConfig PresetBundle::full_fff_config(bool apply_extruder, std::optio
     if (num_filaments <= 1) {
         //BBS: update filament config related with variants
         DynamicPrintConfig filament_config = this->filaments.get_edited_preset().config;
-        if (apply_extruder && ((extruder_count > 1) || different_extruder))
+        // Orca: a multi-variant filament resolves its variants on a single-variant printer too.
+        if (apply_extruder && ((extruder_count > 1) || different_extruder || filament_config.has_multi_variant_filament()))
             filament_config.update_values_to_printer_extruders(out, extruder_count, extruder_volume_type_count, nozzle_volume_types, filament_options_with_variant, "", "filament_extruder_variant", 1, filament_maps[0], (NozzleVolumeType)filament_volume_maps[0]);
         out.apply(filament_config);
         compatible_printers_condition.emplace_back(this->filaments.get_edited_preset().compatible_printers_condition());
@@ -5021,7 +5024,8 @@ DynamicPrintConfig PresetBundle::full_fff_config(bool apply_extruder, std::optio
         filament_temp_configs.resize(num_filaments);
         for (size_t i = 0; i < num_filaments; ++i) {
             filament_temp_configs[i] = *(filament_configs[i]);
-            if (apply_extruder && ((extruder_count > 1) || different_extruder))
+            // Orca: a multi-variant filament resolves its variants on a single-variant printer too.
+            if (apply_extruder && ((extruder_count > 1) || different_extruder || filament_temp_configs[i].has_multi_variant_filament()))
                 filament_temp_configs[i].update_values_to_printer_extruders(out, extruder_count, extruder_volume_type_count, nozzle_volume_types, filament_options_with_variant, "", "filament_extruder_variant", 1, filament_maps[i], (NozzleVolumeType)filament_volume_maps[i]);
         }
 
