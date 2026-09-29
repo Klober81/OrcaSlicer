@@ -1,0 +1,18 @@
+{
+	"type": "process",
+	"name": "0.04mm Ultra Fine @Xplorer 0.4 nozzle",
+	"inherits": "fdm_process_xplorer_common",
+	"from": "system",
+	"setting_id": "JMV0Hd9QN5PtXeUF",
+	"instantiation": "true",
+	"bottom_shell_layers": "7",
+	"bottom_shell_thickness": "0.6",
+	"initial_layer_print_height": "0.3",
+	"layer_height": "0.04",
+	"min_skirt_length": "0",
+	"skirt_distance": "3",
+	"skirt_loops": "1",
+	"slowdown_for_curled_perimeters": "1",
+	"top_shell_layers": "9",
+	"top_solid_infill_flow_ratio": "1"
+}

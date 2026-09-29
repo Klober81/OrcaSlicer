@@ -1,0 +1,12 @@
+{
+	"type": "machine_model",
+	"name": "Vivedino Xplorer 2xGantry",
+	"model_id": "VivedinoXplorer2xGantry",
+	"nozzle_diameter": "0.4",
+	"machine_tech": "FFF",
+	"family": "Vivedino",
+	"bed_model": "Vivedino Xplorer_buildplate_model.stl",
+	"bed_texture": "Vivedino Xplorer 2xGantry_buildplate_texture.png",
+	"hotend_model": "",
+	"default_materials": "Generic PLA @Xplorer;Generic ABS @Xplorer;Generic ASA @Xplorer;Generic PA @Xplorer;Generic PA-CF @Xplorer;Generic PC @Xplorer;Generic PETG @Xplorer;Generic PLA-CF @Xplorer;Generic PVA @Xplorer;Generic TPU @Xplorer;PETG Matte-HS @Xplorer"
+}

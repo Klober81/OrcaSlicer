@@ -1,0 +1,17 @@
+{
+	"type": "process",
+	"name": "0.16mm Optimal @Xplorer 0.4 nozzle",
+	"inherits": "fdm_process_xplorer_common",
+	"from": "system",
+	"setting_id": "7Wyn4h7HnuBbGk6h",
+	"instantiation": "true",
+	"bottom_shell_layers": "4",
+	"initial_layer_print_height": "0.3",
+	"layer_height": "0.16",
+	"min_skirt_length": "0",
+	"skirt_distance": "3",
+	"skirt_loops": "1",
+	"slowdown_for_curled_perimeters": "1",
+	"top_shell_layers": "5",
+	"top_solid_infill_flow_ratio": "0.87"
+}

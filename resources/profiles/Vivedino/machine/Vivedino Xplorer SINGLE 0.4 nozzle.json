@@ -1,0 +1,20 @@
+{
+	"type": "machine",
+	"name": "Vivedino Xplorer SINGLE 0.4 nozzle",
+	"inherits": "fdm_xplorer_common",
+	"from": "system",
+	"setting_id": "C5S12czxCLkEhxHt",
+	"instantiation": "true",
+	"printer_model": "Vivedino Xplorer SINGLE",
+	"printer_variant": "0.4",
+	"nozzle_diameter": [
+		"0.4"
+	],
+	"printable_area": [
+		"10x0",
+		"410x0",
+		"410x400",
+		"10x400"
+	],
+	"default_print_profile": "0.20mm Standard @Xplorer 0.4 nozzle"
+}

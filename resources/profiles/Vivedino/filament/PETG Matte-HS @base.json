@@ -1,0 +1,14 @@
+{
+	"type": "filament",
+	"name": "PETG Matte-HS @base",
+	"inherits": "fdm_filament_pet",
+	"from": "system",
+	"filament_id": "OFZ9W6vg",
+	"instantiation": "false",
+	"filament_vendor": [
+		"Generic"
+	],
+	"filament_type": [
+		"PETG"
+	]
+}
